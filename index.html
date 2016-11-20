@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>EMITCamp</title>
   <style>
@@ -101,9 +101,37 @@
       height: auto;
       padding-top: 1em;
     }
+    @media only screen and (min-width: 1367px) and (max-width: 1918px) {
+      .screen .slide, #prev, #next {
+        height: 810px !important;
+      }
+      .top {
+        height: 154px !important;
+      }
+      .middle {
+        height: 500px !important;
+      }
+      .bottom {
+        height: 154px !important;
+      }
+    }
+    @media only screen and (min-width: 1919px) {
+      .screen .slide, #prev, #next {
+        height: 970px !important;
+      }
+      .top {
+        height: 124px !important;
+      }
+      .middle {
+        height: 402px !important;
+      }
+      .bottom {
+        height: 124px !important;
+      }
+    }
   </style>
 </head>
-<body>
+<body onkeydown="hack(event)">
   <div id="prev" class="btn"></div>
 
   <div class="screen">
@@ -243,33 +271,53 @@
     </div>
 
     <div class="slide">
-      <div class="top"></div>
-      <div class="middle">
+      <div class="top">
         <div class="left">
           <h2>参考资料</h2>
         </div>
         <div class="left">
-          <p>《悟透 JavaScript》：<a href="https://pan.baidu.com/s/1nuUr3wH">https://pan.baidu.com/s/1nuUr3wH</a> 密码：fh36</p>
+          <p>《悟透 JavaScript》：<a href="https://pan.baidu.com/s/1nuUr3wH" target="_blank">https://pan.baidu.com/s/1nuUr3wH</a> 密码：fh36 <br>
         </div>
+      </div>
+      <div class="middle">
         <div class="left">
           <h2>作业</h2>
         </div>
         <div class="left">
-          fork 并改动这个仓库: <a href="https://github.com/OneNewLife/EMITCamp.git">https://github.com/OneNewLife/EMITCamp.git</a><br>
-          将作业写进这个仓库，然后发 Pull Request
+          <p>1. <b>fork</b> 这个仓库: <a href="https://github.com/OneNewLife/EMITCamp.git" target="_blank">https://github.com/OneNewLife/EMITCamp.git</a><br>
+          2. 然后切换到仓库的根目录，执行 <b>git remote add mars https://github.com/OneNewLife/EMITCamp.git</b><br>
+          3. 然后在仓库的根目录创建一个新目录，命名为你的 <b>Github</b> <b>username</b>，例如我的用户名是 <b>OneNewLife</b><br>
+             在你自己的文件夹下做作业。<br>
+          4. 每次提交代码更改之前，先执行 <b>git pull mars master</b>，然后再到 <b>Github</b> 的仓库目录发 <b>Pull Request</b>。</p>
+        </div>
+        <br>
+        <div class="left">
+          <b>作业内容：</b><br>
+          1. 用面向对象的思想实现一个科学计算器，尽可能实现更多的功能（可以参照你的手机自带的计算器来做），有能力的同学尽量实现<br>
+          图形界面。<br>
+          2. 在你的作业文件夹下做一个个人主页（博客），要求有你真实的个人介绍和一篇文章（没有字数要求），这篇文章记录你到目前为<br>
+          止学到的东西，有能力的同学可以尝试自己设计一下主题，或者尝试用别人家的主题：<br>
+          <a href="http://jekyllthemes.org" target="_blank">http://jekyllthemes.org</a><br>
+          <a href="https://hexo.io/themes" target="_blank">https://hexo.io/themes</a>
+        </div>
+        <div class="left">
+          <p><b>下周六之前交！！！</b></p>
+        </div>
+        <div class="left">
+          <p>这次作业难度不大，但是需要你多花点时间，加油吧，骚年：）</p>
         </div>
       </div>
       <div class="bottom"></div>
     </div>
   </div>
 
-  <div id="next" class="btn" onkeydown="hack()"></div>
+  <div id="next" class="btn"></div>
 
   <script>
-    window.onload = function () {
-      var slides = document.getElementsByClassName('slide');
-      var lastIndex = slides.length - 1;
+    var slides = document.getElementsByClassName('slide');
+    var lastIndex = slides.length - 1;
 
+    window.onload = function () {
       document.getElementById('prev').addEventListener('click', function () {
         var currentSlide = document.getElementsByClassName('show')[0];
         var currentIndex = Array.prototype.indexOf.call(slides, currentSlide);
@@ -289,6 +337,29 @@
           slides[currentIndex + 1].className = 'slide show';
         }
       });
+    };
+
+    function hack(event) {
+      var key = event.keyCode || event.which;
+      var keychar = String.fromCharCode(key);
+
+      if (key == 37 || key == 38) {
+        var currentSlide = document.getElementsByClassName('show')[0];
+        var currentIndex = Array.prototype.indexOf.call(slides, currentSlide);
+
+        if (currentIndex > 0) {
+          currentSlide.className = 'slide';
+          slides[currentIndex - 1].className = 'slide show';
+        }
+      } else if (key == 39 || key == 40) {
+        var currentSlide = document.getElementsByClassName('show')[0];
+        var currentIndex = Array.prototype.indexOf.call(slides, currentSlide);
+
+        if (currentIndex < lastIndex) {
+          currentSlide.className = 'slide';
+          slides[currentIndex + 1].className = 'slide show';
+        }
+      }
     };
   </script>
 </body>
