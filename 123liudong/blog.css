@@ -82,31 +82,33 @@ button a{
 
 }
 #one{
-	text-align: center;
 	height:640px;
 	background-color: #20A914;
 }
 .wrapper{
 /*	max-width: 1080px;*/
-	margin: 0 auto;
+/*	margin: 0 auto;*/
 
 }
 .hr{//设置下划线的样式
 	width: 100%;
 	height: 2px;
     
-	margin: 0 auto;
+/*	margin: 0 auto;*/
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
 .wrapper .hr{
 	background-color:#C6B124;
-	width: 50%;
+	width: 100%;
 }
 .wrapper .hr p{
 	position: relative;
 	top: 300px;
 	font-size:75px;
+}
+.wrapper #wra p{
+    font-size: 25px;
 }
 #one .ite{
 	margin-top: 25px;
@@ -114,10 +116,11 @@ button a{
 .deg{
 	display: inline-block;
 	width: 20px;
+	float: left;
 	height: 20px;
 	background-color: #E39B84;
 	transform: rotate(45deg);
-	margin:45px;
+	margin:3%;
 	border: 3px solid #1B0C0C;
 
 
@@ -126,46 +129,61 @@ button a{
 	height:640px;
 	background-color: #2D55C6;
 }
+#two  .wrap2 span{
+	font-size: 20px;
+/*	position: relative;
+		bottom: 300px*/;
+	float: left;	
+/*	position: absolute;
+	left: 0;*/
+	margin-left: 0;
+	color: yellow;
+}
+#two #tu{
+/*	width: 500px;*/
+	height: 150px;
+/*	float: left;*/
+/*	background-color: #670909;*/
+}
 #two #pic1 img,#two #pic2 img{
 	height: 150px;
-
 }
 #two #pic1{
 	float: left;
 	margin-left: 20px;
 }
 .intro{
-	width: 500px;
-	height: 750px;
-	position: relative;
-	left: 100px;
+	float: left;
+	width: 200px;
+	height: 450px;
+	clear: both;
+/*	position: relative;
+    bottom: 100px;*/
 /*	background-color: #146184;*/
-	margin: 0 auto;
+/*	margin: 0 auto;*/
 }
 #two #pic2{
 	float: right;
-	margin-right: 70px;
+	margin-right: 190px;
 	position:relative;
-	bottom: 320px;
+	top: 220px;
 }
 #two .intro p{
-	margin-top: 120px;
-	position: relative;
-	right:120px;
-	float: right;
+/*	margin-top: 120px;*/
+/*	position: relative;
+	bottom :50px;*/
+
+
 }
 #two .intro p a{
-    margin-left: 0;
+	float: left; 
+	margin-left: 0;
     font-size: 25px;
-	margin-top: 320px;
-	text-decoration: none;
+/*	margin-top: 320px;*/
+	text-decoration: none;	
+	color: #ACF576;
 }
-#two span{
-	font-size: 20px;
-	position: relative;
-	bottom: 300px;
-	color: yellow;
-}
+
 #three{
 	height: 640px;
 
@@ -179,108 +197,104 @@ button a{
 	bottom: 100px;*/
 
 }
-#three .num1 img{
-	height: 200px;
-}
 #three .num1 #pict1{
 	width: 33%;
 	float: left;
-	position: relative;
-	bottom: 100px;
+/*	position: relative;
+	bottom: 100px;*/
 }
 #three .num1 #pict2{
 	width: 33%;
+	margin: 0 auto;
 	float: left;
-	position: relative;
+	margin-left: 130px;
+/*	position: relative;
 	left: 500px;
 	bottom: 250px;
-}
+*/}
 #three .num1 #pict3{
 	position: relative;
 	right: 45px;
-	bottom: 250px;
+/*	bottom: 250px;*/
 	float: right;
 }
 #three .num2 h1{
-	position: relative;
-	right: 414px;
+	clear: both;
 }
 #three .num2 #pict1{
-	position: relative;
-	bottom: 40px;
-	right: 418px;
+	width: 33%;
 	float: left;
-    width:400px; 
-	height: 300px;
 }
 #three .num2 #pict2{
-     float: left;
+  /*   float: left;
      position: relative;
      bottom: 180px;
      right: 200px;
      width: 100px;
-     margin-left: 28.9%;
+     margin-left: 28.9%;*/
+    width: 33%;
+	margin: 0 auto;
+	float: left;
+	margin-left: 130px;
 }
 #three .num2 #pict3{
-	height: 200px;
 	position: relative;
-	bottom: 180px;
-	width: 380px;
+	right: 45px;
+/*	bottom: 250px;*/
 	float: right;
-	position: relative;right: 45px;
 }
 #three .num3 h1{
-	position: relative;
-	right: 880px;
+	/*position: relative;
+	right: 880px;*/
 }
 #three .num3 #pict1{
-	position: relative;
-	bottom: 100px;
-	width: 400px;
-	height: 200px;
+	width: 33%;
 	float: left;
 }
 #three .num3 #pict2{
+    width: 33%;
+	margin: 0 auto;
 	float: left;
-	width: 370px;
-	height: 200px;
-	position: relative;
-	right: 40px;
-	bottom: 100px;
-    margin-left: 28.9%;
+	margin-left: 130px;
 }
 #three .num3 #pict3{
-	height: 300px;
-	width: 380px;
-	float: right;
 	position: relative;
-	bottom: 100px;
-	right: 45px;	
+	right: 45px;
+/*	bottom: 250px;*/
+	float: right;
+}	
 }
 
 footer #me{
 	height: 600px;
-	
 	background-color:#D8D0D0;
 }
+#me .mypho1{
+	height: 300px ;float: right;
+}
+#me .mypho2{
+		height: 300px ;float: right;
+}
+
 #pdf1{
+	color: #22658A;
 	clear: both;
 	font-size: 25px;
-	color: #22658A;
-	position: relative;
-	top: 5px;
-    right: 350px;
+	background-color: #3EEC61;
 }
 #pdf2{
-	font-size: 30px;
-	color: #8F9C09;
+	font-size: 45px;
 	position: relative;
-	top: 70px;
-	right: 350px;
+	top: 50px;
+	color: #564AC4;
 }
 #pdf3{
-	text-align: center;
+   color: #191414;
+   font-size: 25px;
 	position: relative;
-	top:400px;
-	left:110px;
+	top: 150px;   
+	background-color: #42A4D9;
+}
+.mostimp{
+	background-color: #A545DA;
 }
