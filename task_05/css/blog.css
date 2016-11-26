@@ -1,0 +1,212 @@
+body{
+	margin: 0;
+	padding: 0;
+	background:url(../images/4PI48D3L61YC.jpg); 
+}
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1480001462755'); /* IE9*/
+  src: url('iconfont.eot?t=1480001462755#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1480001462755') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1480001462755') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1480001462755#iconfont') format('svg'); /* iOS 4.1- */
+}
+i{
+	display: block;
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+ }
+
+.icon-dateto:before { content: "\e628"; }
+.shelter{
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 415px;
+	margin-top: -30px;
+
+}
+.title{
+	font-family: "微软雅黑";
+	font-size: 25px;
+	color:#ffffff;
+	margin-left: 45px;
+	padding-top: 50px;
+	letter-spacing: 1px;
+	font-weight: 700;
+	width: 300px;
+	cursor: pointer;
+}
+
+
+.click{
+	margin-left: 920px;
+	margin-top: -25px;
+	color: #ffffff;
+	font-family: "微软雅黑";
+	width: 100px;
+}
+.face{
+	width: 30px;
+	margin-left: 1008px;
+	margin-top: -25px;
+}
+.face,.sina,.twitter,.wifi{
+	width: 30px;
+	float: left;
+	margin-left: 1008px;
+	margin-top: -25px;
+	cursor: pointer;
+}
+.sina{
+	margin-left: 6px;
+}
+.sina:hover
+{ 
+background-color:#8e3131;
+border-radius: 35px;
+}
+.twitter{
+	margin-left:6px;
+}
+.twitter:hover
+{ 
+background-color:#8e3131;
+border-radius: 35px;
+}
+.wifi{
+	margin-left: 6px;
+}
+.my_blog{
+	width:275px;
+	font-size: 60px;
+	font-family: "微软雅黑";
+	letter-spacing: 2px;
+	font-weight: 700;
+	color: #ffffff;
+	margin: 0 auto;
+	margin-top: 100px;
+	letter-spacing: 2px;
+}
+.title2 .string{
+	width: 70px;
+	height: 3px;
+	background-color: #ffffff;
+	margin: 0 auto;
+	margin-top: 5px;
+}
+.title2 .introduce{
+	width: 225px;
+	font-size: 20px;
+	font-family: "微软雅黑";
+	margin:0 auto;
+	color: #ffffff;
+	margin-top: 10px;
+	letter-spacing: 1px;
+
+
+}
+.backgroundxia{
+	background-color: #e3dede;
+	width: 100%;
+	height: 450px;
+	padding-top: 42px;
+}
+.backgroundxia .middle{
+	width: 1080px;
+	background-color: #ffffff;
+	margin: 0 auto;
+	height: 450px;
+	border-radius: 6px;
+	top:50px;
+
+}
+.middle{
+	border-top:1px solid transparent;
+}
+.middle .learning{
+	margin-left: 50px;
+	margin-top: 20px;
+	font-size: 25px;
+	font-family: "微软雅黑";
+	font-weight: 400;
+}
+.learning .hello{
+	display: block;
+	height: 18px;
+	margin-top: 20px;
+	margin-top: 15px;
+}
+.learning .iconfont{
+	margin-top: 18px;
+	margin-left: 3px;
+}
+.learning .time{
+	font-size: 13px;
+	margin-left: 25px;
+	margin-top: -18px;
+}
+/*.words{
+	font-size: 15px;
+	font-family: "微软雅黑";
+	width: 500px;
+}*/
+@font-face {font-family: "iconfont";
+  src: url('iconfont1.eot?t=1480054508014'); /* IE9*/
+  src: url('iconfont1.eot?t=1480054508014#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont1.woff?t=1480054508014') format('woff'), /* chrome, firefox */
+  url('iconfont1.ttf?t=1480054508014') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont1.svg?t=1480054508014#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}.icon-ren:before { content: "\e752"; }
+
+.icon-dateto:before { content: "\e628"; }
+
+#people{
+	margin-top: -18px;
+	margin-left: 120px;
+}
+.learning .name{
+	margin-left: 145PX;
+	font-size: 13Px;
+	margin-top: -20PX;
+	font-family: "微软雅黑";
+}
+.words{
+	font-size: 12px;
+	margin-top: 20px;
+	margin-left: 5px;
+	width: 690px;
+	line-height: 23px;
+}
+.me img{
+	display: block;
+	margin-left: 780px;
+	margin-top: -300px;
+	width: 150px;
+	height: 150px;
+	border-radius: 100px;
+}
+.middle .learning .introduce{
+	width: 500px;
+	margin-left: 780PX;
+	margin-top: 20px;
+}
+
+
+
+
+
+
+
