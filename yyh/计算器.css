@@ -1,0 +1,21 @@
+input{
+	height: 100px;
+	width: 425px;
+	font-size: 40px;
+}
+
+
+button{
+	margin:0 auto;
+	height: 70px;
+	width: 100px;
+	font-size:30px;
+}
+.jisuanqi{
+	width: 450px;
+    height: 500px;
+	background-color: white;
+	margin:0 auto;
+
+
+}
