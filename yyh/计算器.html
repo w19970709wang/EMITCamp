@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>计算器</title>
+  <script type="text/javascript">
+   var numresult;
+   var str;
+   function onclicknum(nums) //定义函数
+   {
+    str = document.getElementById("screen");
+    str.value = str.value + nums; 
+   }
+   function onclickclear(){
+    str = document.getElementById("screen");
+    str.value = "";
+   }
+
+   function onclickzhengfu(){
+     str=document.getElementById("screen");
+     str.value = (-1)*str.value;
+   }
+   function onclickdelete(){
+    str=document.getElementById("screen");
+    str.value = (str.value-str.value % 10)/10;
+   } 
+    function onclickresult() {
+    str = document.getElementById("screen");
+    numresult=eval(str.value);
+    str.value=numresult;
+   }
+  </script>
+  <link rel="stylesheet" type="text/css" href="计算器.css">
+</head>
+<body>
+<div class="jisuanqi">
+<table border="1">
+<tr>
+<input type="text" id="screen">
+</tr>
+<tr>
+   <td><button id="clear" onclick="onclickclear()">AC</button></td>
+   <td><button id="delete" onclick="onclickdelete()">←</button></td>
+   <td><button id="zhengfu" onclick="onclickzhengfu()">+/-</button></td>
+   <td><button id="chu" onclick="onclicknum('/')"><!-- 实现调用 -->÷</button></td>
+</tr>
+<tr>
+<td><button id="7"  onclick="onclicknum(7)">7</button></td>
+<td><button id="8"  onclick="onclicknum(8)">8</button></td>
+<td><button id="9"  onclick="onclicknum(9)">9</button></td>
+<td><button id="cheng" onclick="onclicknum('*')">X</button></td>
+</tr>
+<tr>
+<td><button id="4" onclick="onclicknum(4)">4</button></td>
+<td><button id="5" onclick="onclicknum(5)">5</button></td>
+<td><button id="6" onclick="onclicknum(6)">6</button></td>
+<td><button id="jian" onclick="onclicknum('-')">-</button></td>
+</tr>
+<tr>
+<td><button id="1" onclick="onclicknum(1)">1</button></td>
+<td><button id="2" onclick="onclicknum(2)">2</button></td>
+<td><button id="3" onclick="onclicknum(3)">3</button></td>
+<td><button id="jia" onclick="onclicknum('+')">+</button></td>
+</tr>
+<tr>
+<td><button id="0" onclick="onclicknum(0)">0</button></td>
+<td><button>&nbsp;</button></td>
+<td><button id="dian" onclick="onclicknum('.')"> . </button></td>
+<td><button id="result" onclick="onclickresult()">=</button></td>
+</tr>
+</table>
+</div>
+</table>
+
+</body>
+</html>

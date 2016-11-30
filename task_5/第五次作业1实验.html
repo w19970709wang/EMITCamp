@@ -1,0 +1,136 @@
+<html>
+<head>
+ <meta charset="utf-8">
+<title>网页计算器</title>
+</head>
+<body>
+<table align="center">  
+  <tr>  
+        <td colspan="4" id="content"></td>  
+    </tr>  
+    <tr>  
+        <td colspan="4" id="result"></td>  
+    </tr>  
+    <tr>  
+        <td class="td_orange" colspan="2" onclick="appContent(this)">c</td>  
+        <td class="td_orange" onclick="appContent(this)">del</td>
+        <td class="td_orange" onclick="appContent(this)">/</td>
+    </tr>
+    <tr>
+        <td onclick="appContent(this)">1</td>  
+        <td onclick="appContent(this)">2</td>  
+        <td onclick="appContent(this)">3</td>  
+        <td class="td_orange" onclick="appContent(this)">*</td>  
+    </tr>  
+    <tr>  
+        <td onclick="appContent(this)">4</td>  
+        <td onclick="appContent(this)">5</td>  
+        <td onclick="appContent(this)">6</td>  
+        <td class="td_orange" onclick="appContent(this)">-</td>  
+    </tr>  
+    <tr>  
+        <td onclick="appContent(this)">7</td>  
+        <td onclick="appContent(this)">8</td>  
+        <td onclick="appContent(this)">9</td>
+        <td class="td_orange" onclick="appContent(this)">+</td>   
+    </tr>  
+    <tr>   
+        <td colspan="2" onclick="appContent(this)">0</td>  
+        <td onclick="appContent(this)">.</td>    
+        <td class="td_orange" onclick="appContent(this)">=</td>  
+    </tr>  
+</table> 
+<style type="text/css">  
+* {  
+    margin: 0px;  
+    padding: 0px;  
+}  
+  
+td {  
+    background-color: #303133;  
+    width: 100px;  
+    height: 80px;  
+    color: white;  
+    text-align: center;  
+    font-size: 20px;  
+}  
+  
+.td_orange {  
+    background-color: #FA6F14;  
+}  
+</style>  
+<script type="text/javascript">
+function appContent(td){   
+    var content = document.getElementById("content");  
+    var result = document.getElementById("result");    
+    var text = td.innerText;  
+if("del" == text){  
+    if(content.innerText.length > 0){  
+      
+        content.innerText = content.innerText.substring(0,content.innerText.length-1);  
+    }  
+ 
+    }else if("c" == text){  
+        content.innerText = "";  
+ 
+    }else if("=" == text){  
+        var resultText = parse(content.innerText);  
+        result.innerText = content.innerText + "=" + resultText;  
+        content.innerText = "";  
+
+    }else{  
+        content.innerText = content.innerText + text;  
+    }  
+      
+} 
+function parse(content){  
+
+   var index = content.lastIndexOf("(");  
+  
+   
+    if(index > -1){  
+ 
+        var endIndex = content.indexOf(")",index);  
+  
+  
+        if(endIndex > -1){  
+
+            var result = parse(content.substring(index + 1,endIndex));  
+   
+            return parse(content.substring(0,index) + ("" + result) + content.substring(endIndex + 1))   
+        } 
+    } 
+  
+    index = content.indexOf("+");  
+          
+    if(index > -1){  
+        return parse(content.substring(0,index)) + parse(content.substring(index + 1));  
+    }  
+  
+    index = content.lastIndexOf("-");  
+  
+    if(index > -1){  
+        return parse(content.substring(0,index)) - parse(content.substring(index + 1));  
+    }  
+  
+    index = content.lastIndexOf("*");  
+  
+    if(index > -1){  
+        return parse(content.substring(0,index)) * parse(content.substring(index + 1));  
+    }  
+  
+    index = content.lastIndexOf("/");  
+  
+    if(index > -1){  
+        return parse(content.substring(0,index)) / parse(content.substring(index + 1));  
+    }  
+          
+    if("" == content){   
+        return 0;  
+    }else{  
+        return content - 1 + 1;  
+    }  
+}  
+  </script>
+</body>
+</html>
